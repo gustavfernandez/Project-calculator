@@ -1,14 +1,17 @@
 
 function operate(operator, num1, num2) {
-    if (operator === "suma") {
-        
-    } else if (operator === "resta") {
-        
-    } else if (operator === "division") {
-        
-    } else if (operator === "multiplicacion") {
 
+    if (operator === "suma") {
+        result = suma(num1, num2)
+    } else if (operator === "resta") {
+        result = resta(num1, num2)
+    } else if (operator === "division") {
+        result = division(num1, num2)
+    } else if (operator === "multiplicacion") {
+        result = multipicacion(num1, num2)
     }
+
+    return result
 }
 
 function suma(a, b){
@@ -22,6 +25,9 @@ function resta(a, b) {
 }
 
 function division(a, b) {
+    if (b === 0) {
+        return "div by zero"
+    }
     let c = a/b
     return c
 }
