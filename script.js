@@ -52,6 +52,7 @@ buttonsNum.forEach((button) => {
             clearDisplay()
             numeros = []
             limpiar = false
+            num = ""
         }
         num += button.id // num es el número que se agrega al array de numeros.
         addDisplay(button.id)
