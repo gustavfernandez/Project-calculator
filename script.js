@@ -29,7 +29,7 @@ function division(a, b) {
     if (b === 0) {
         return "div by zero"
     }
-    let c = a/b
+    let c = Math.round(a/b * 1000)/1000
     return c
 }
 
