@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="scrpit.js" defer></script>
+    <script src="script.js" defer></script>
     <link href="./style.css" rel="stylesheet">
     <title>Calculator</title>
 </head>
@@ -9,32 +9,33 @@
 <body>
     <div class="big-grid">
         <ul>
-            <li><button id="1">1</button></li>
-            <li><button id="2">2</button></li>
-            <li><button id="3">3</button></li>
-            <li><button id="suma">+</button></li>
+            <li><button id="1" class="num">1</button></li>
+            <li><button id="2" class="num">2</button></li>
+            <li><button id="3" class="num">3</button></li>
+            <li><button id="suma" class="operator">+</button></li>
         </ul>
         <ul>
-            <li><button id="4">4</button></li>
-            <li><button id="5">5</button></li>
-            <li><button id="6">6</button></li>
-            <li><button id="resta">-</button></li>
+            <li><button id="4" class="num">4</button></li>
+            <li><button id="5" class="num">5</button></li>
+            <li><button id="6" class="num">6</button></li>
+            <li><button id="resta" class="operator">-</button></li>
         </ul>
         <ul>
-            <li><button id="7">7</button></li>
-            <li><button id="8">8</button></li>
-            <li><button id="9">9</button></li>
-            <li><button id="multiplicacion">x</button></li>
+            <li><button id="7" class="num">7</button></li>
+            <li><button id="8" class="num">8</button></li>
+            <li><button id="9" class="num">9</button></li>
+            <li><button id="multiplicacion" class="operator">x</button></li>
         </ul>
         <ul>
             <li><button id="limpiar">clear</button></li>
-            <li><button id="0">0</button></li>
+            <li><button id="0" class="num">0</button></li>
             <li><button id="igual">=</button></li>
-            <li><button id="division">÷</button></li>
+            <li><button id="division" class="operator">÷</button></li>
         </ul>
     </div>
 
-    <div class="display-box">1020</div>
+    <div class="display-box"></div>
+    <div class="display-result"></div>
 </body>
 
 </html>
