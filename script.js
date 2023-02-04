@@ -29,7 +29,7 @@ function division(a, b) {
     if (b === 0) {
         return "div by zero"
     }
-    let c = Math.round(a/b * 1000)/1000
+    let c = a/b
     return c
 }
 
@@ -62,7 +62,7 @@ buttonsNum.forEach((button) => {
 const buttonsOperator = document.querySelectorAll('.operator');
 buttonsOperator.forEach((button) => {
     button.addEventListener('click', () => {
-        addDisplay(button.textContent)
+        addDisplay(" " + button.textContent + " ")
         limpiar = false
         if (num != "") {
             numeros.push(Number(num), button.id)
@@ -93,6 +93,19 @@ buttonClear.addEventListener('click', () => {
     console.log(numeros)
 })
 
+const buttonDot = document.querySelector('#dot');
+buttonDot.addEventListener('click', () => {
+    // Si ya se puso el igual, se limpia la lista y el display al colocar un nuevo numero
+    if (limpiar) {
+        clearDisplay()
+        numeros = []
+        limpiar = false
+        num = ""
+    }
+    num += "." // num es el número que se agrega al array de numeros.
+    addDisplay(".")
+
+})
 
 function addDisplay(text) {
     display = document.querySelector('.display-box');
@@ -125,7 +138,7 @@ function calcular(numeros) {
             return addDisplay("You can't divide by zero") // Error si se divide por 0.
         }
     }
-
+    total = Math.round(total*1000)/1000
     addResult(` = ${total}`)
     return total
 }
